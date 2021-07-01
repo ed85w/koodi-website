@@ -1,3 +1,29 @@
+// navbar
+function burgerMenu() {
+  const burgerBtn = document.getElementById('burger-btn');
+  const navMenu = document.getElementById('nav-menu');
+  console.log('click');
+  if (navMenu.classList.contains("expanded")){
+    navMenu.classList.remove("expanded");
+    burgerBtn.setAttribute("aria-expanded", false)
+
+  } else {
+    navMenu.classList.add("expanded");
+    burgerBtn.setAttribute("aria-expanded", true)
+  }
+}
+
+
+
+// GSAP 
+
+// gsap timeline to animate logo 
+var logoTl = gsap.timeline({})
+logoTl.from("#logo-k-line", {duration:1, height: 0, ease: Power3.easeOut }, 0.7)
+logoTl.from("#logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7)
+logoTl.from("#logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2)
+logoTl.from("#logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5)
+
 // // "floating circles"
 const randomX = random(1, 20);
 const randomY = random(1, 20);
@@ -52,6 +78,29 @@ function random(min, max) {
   const delta = max - min;
   return (direction = 1) => (min + delta * Math.random()) * direction;
 }
+
+
+// SCROLLTRIGGER ANIMATIONS 
+
+gsap.registerPlugin(ScrollTrigger);
+
+
+// testimonial circle animation (mob )
+let testimonialTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".testimonial-logo-container",
+    start: "top center",
+  }
+})
+
+testimonialTl.from(".testimonial-logo", {
+  width: "100%",
+  duration: 1
+})
+.from(".testimonials .container .pink-circle", {
+  scale: 0,
+  duration: 1
+},0)
 
 
 

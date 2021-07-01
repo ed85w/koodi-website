@@ -48,12 +48,12 @@
       <div class="container">
         <div class="row">
           <nav class="col-12">
-            <button id="burger-btn" aria-expanded="false" aria-label="expand navigation menu">
+            <button id="burger-btn" aria-expanded="false" aria-label="expand navigation menu" onclick="burgerMenu()">
               <div class="burger-line"></div>
               <div class="burger-line"></div>
               <div class="burger-line"></div>
             </button>
-            <div class="navigation-items-container">
+            <div class="navigation-items-container" id="nav-menu" >
               <ul class="nav-links">
                 <li>Our Work</li>
                 <li>Testimonials</li>
@@ -220,9 +220,11 @@
         <img class="testimonial-logo" src="img/koodi-logo-final.svg" alt="koodi logo">
       </div>
       <div class="container test">
+        <!-- pink circle  -->
+        <div class="circle pink-circle"></div>
         <div class="row d-flex justify-content-center">
-          <div class="col-12 pt-5 pb-5 text-center">
-            <h1 class="pb-3">What our clients say...</h1>
+          <div class="col-12 pt-5 pb-5 text-left text-md-center">
+            <h1 class="pb-3">What our<br class="d-md-none"> clients say...</h1>
           </div>
           <div class="col-8 pt-3 mb-3 test">
             <!-- Swiper -->

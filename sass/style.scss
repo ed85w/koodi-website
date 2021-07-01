@@ -48,7 +48,7 @@ h5 {
 
 // buttons
 .btn {
-  font-size: 20px;
+  font-size: calc(10px + 1.3vw);
   font-weight: bold;
   border-radius: 30px;
   padding: 5px 16px;
@@ -70,6 +70,12 @@ h5 {
   }
 }
 
+// cicles 
+.circle {
+  border-radius: 50%;
+  position: absolute;
+}
+
 // navbar 
 section.navigation {
 
@@ -78,6 +84,7 @@ section.navigation {
     top: 15px;
     right: 15px;
     height: 30px;
+    z-index: 2;
     background: none;
     border: none;
 
@@ -111,23 +118,18 @@ section.landing {
   overflow: hidden;
 
   .landing-container {
+    position: relative;
 
     h2.tagline {
       font-size: calc(10px + 1.9vw);
       font-weight: normal;
     }
 
-    // cicles 
-    .circle {
-      border-radius: 50%;
-      position: absolute;
-    }
-
     .yellow-circle {
       left: -69px;
       top: -86px;
-      width: 60vw;
-      height: 60vw;
+      width: calc(120px + 11vw);
+      height: calc(120px + 11vw);
       max-width: 280px;
       max-height: 280px;
       background: #FFDE33;
@@ -136,7 +138,7 @@ section.landing {
     }
     .cyan-circle {
       right: -69px;
-      top: 73px;
+      top: 0px;
       width: calc(80px + 11vw);
       height: calc(80px + 11vw);
       background: #1CF5C7;
@@ -154,11 +156,11 @@ section.landing {
       box-shadow: 0px 96px 96px rgba(7, 48, 163, 0.16);
     }
     .pink-circle {
-      left: -140px;
+      left: 0px;
       bottom: 0px;
-      width: 273px;
-      height: 273px;
-      background: #8359FE;
+      width: calc(133px + 11vw);
+      height: calc(133px + 11vw);
+      background: #F943E7;
       background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FBD0FF 25%, #FBD0FF 48%, #F943E7 48%, #F943E7 100% );
       box-shadow: 0px 96px 96px rgba(7, 48, 163, 0.16);
     }
@@ -178,6 +180,7 @@ section.koodi-overview {
   color: white;
 }
 
+// included in websites 
 section.included {
   width: 100%;
   background: $primary-purple;
@@ -366,24 +369,33 @@ section.testimonials {
   background: #C1ACFF;
 
   .testimonial-logo-container {
-    position: absolute;
-    height: 100%;
-    width: 20%;
+    position: relative;
+    width: 100%;
+    // height: 100%;
     top: 0;
     left: 0;
+    background: white;
     border: 2px solid black;
     overflow: hidden;
 
     img.testimonial-logo {
       position: relative;
-      top: 50%;
-      right: -20%;
-      width: 500px;
+      top: 13px;
+      left: -5px;
+      width: 69%;
       height: auto;
-      transform-origin: center;
-      transform:  translateX(-50%) translateY(-50%) rotate(90deg);
       object-fit: cover;
     }
+  }
+
+  .pink-circle {
+    right: -94px;
+    top: 0px;
+    width: 214px;
+    height: 214px;
+    background: #F943E7;
+    background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FBD0FF 25%, #FBD0FF 48%, #F943E7 48%, #F943E7 100% );
+    box-shadow: 0px 96px 96px rgba(7, 48, 163, 0.16);
   }
 
   h1{
@@ -436,6 +448,11 @@ footer.footer {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+
+  // buttons
+  .btn {
+    font-size: 20px;
+}
 
 }
 
@@ -609,6 +626,33 @@ footer.footer {
    }
      
 
+  }
+
+  // testimonials 
+  section.testimonials {
+    position: relative;
+    background: #C1ACFF;
+
+    .testimonial-logo-container {
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      top: 0;
+      left: 0;
+      border: 2px solid black;
+      overflow: hidden;
+
+      img.testimonial-logo {
+        position: relative;
+        top: 50%;
+        right: -20%;
+        width: 500px;
+        height: auto;
+        transform-origin: center;
+        transform:  translateX(-50%) translateY(-50%) rotate(90deg);
+        object-fit: cover;
+      }
+    }
   }
 }
 

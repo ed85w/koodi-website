@@ -55,15 +55,15 @@
             </button>
             <div class="navigation-items-container" id="nav-menu" >
               <ul class="nav-links">
-                <li>Our Work</li>
-                <li>Testimonials</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li class="navbar-li"><a href="#our-work">Our Work</a></li>
+                <li class="navbar-li"><a href="#testimonials">Testimonials</a></li>
+                <li class="navbar-li"><a href="#about">About</a></li>
+                <li class="navbar-li"><a href="#contact">Contact</a></li>
               </ul>
               <ul class="socials">
-                <li><img src="/img/instagram-logo.png" alt=""></li>
-                <li><img src="/img/facebook-logo.png" alt=""></li>
-                <li><img src="/img/linkedin-logo.png" alt=""></li>
+                <li class="navbar-li"><a href="#"><img src="/img/instagram-logo.png" alt="instagram logo"></a></li>
+                <li class="navbar-li"><a href="#"><img src="/img/facebook-logo.png" alt="facebook logo"></a></li>
+                <li class="navbar-li"><a href="#"><img src="/img/linkedin-logo.png" alt="linkedin logo"></a></li>
               </ul>
             </div>
           </nav>
@@ -75,7 +75,7 @@
       <div class="container landing-container test">
         <div class="row pt-5 pb-3 pb-lg-5 justify-content-center">
           <div class="col-12 col-lg-10 pt-5 pb-0 pt-lg-0">
-            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 553.15 227.49">
+            <svg id="koodi-logo" data-name="koodi logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 553.15 227.49">
               <defs>
                 <style>.cls-1{fill:#000000;}</style>
               </defs>
@@ -100,7 +100,7 @@
         <!-- circles  -->
         <div class="circle yellow-circle floating"></div>
         <div class="circle cyan-circle floating"></div>
-        <div class="circle blue-circle"></div>
+        <div class="circle blue-circle floating"></div>
         <div class="circle pink-circle floating"></div>
       </div>
     </section>
@@ -123,33 +123,33 @@
   <section class="included">
     <div class="container pt-5 pb-5">
       <div class="row">
-        <div class="col-12 pt-3 pb-5">
+        <div class="col-12 pt-3 pb-5 text-center">
           <h3>Our websites are;</h3>
         </div>
       </div>
       <div class="row pb-3">
-        <div class="col-12 col-md-4 text-center">
-          <h5>Fully Responsive</h5>
+        <div class="col-12 col-md-4 p-3 text-center">
+          <h5 class="pb-3">Fully Responsive</h5>
           <p>Look great on all devices and at all screen sizes</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-          <h5>Search Engine Optimised</h5>
+        <div class="col-12 col-md-4 p-3 text-center">
+          <h5 class="pb-3">Search Engine Optimised</h5>
           <p>Look great on all devices and at all screen sizes</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-          <h5>Measurable</h5>
+        <div class="col-12 col-md-4 p-3 text-center">
+          <h5 class="pb-3">Measurable</h5>
           <p>Include analytics tools so you can see how many people are visiting your site</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-          <h5>Secure</h5>
+        <div class="col-12 col-md-4 p-3 text-center">
+          <h5 class="pb-3">Secure</h5>
           <p>To ensure maximum uptime</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-          <h5>Accessible</h5>
+        <div class="col-12 col-md-4 p-3 text-center">
+          <h5 class="pb-3">Accessible</h5>
           <p>To ensure that those with additional needs are not prevented from using your site</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-          <h5>Optimised for speed</h5>
+        <div class="col-12 col-md-4 p-3 text-center">
+          <h5 class="pb-3">Optimised for speed</h5>
           <p>Both users and search engines are put off by slow sites, we optimise your site for speed</p>
         </div>
       </div>
@@ -157,7 +157,7 @@
   </section>
 
   <!-- our work  -->
-  <section class="container our-work">
+  <section class="container our-work" id="our-work">
     <div class="circle yellow-circle"></div>
     <div class="circle cyan-circle"></div>
     <div class="circle blue-circle"></div>
@@ -226,7 +226,7 @@
           <div class="col-12 pt-5 pb-5 text-left text-md-center">
             <h1 class="pb-3">What our<br class="d-md-none"> clients say...</h1>
           </div>
-          <div class="col-8 pt-3 mb-3 test">
+          <div class="col-12 col-lg-8 pt-3 mb-3 test">
             <!-- Swiper -->
             <div class="swiper-container mySwiper">
               <div class="swiper-wrapper">
@@ -275,7 +275,7 @@
     </section>
 
     <!-- contact  -->
-    <section class="container contact-us">
+    <section class="container contact-us pb-5">
       <div class="row">
         <div class="col-12">
           <h1 class="pb-3">Contact us...</h1>
@@ -340,21 +340,40 @@
       </div>
     </section>
 
-    <footer class="footer container">
-      <div class="row">
-        <div class="col-12">
-          <img class="footer-logo" src="img/koodi-logo-black.png">
-        </div>
-        <div class="col-12">
-          <ul class="footer-nav-links">
-            <li>About</li>
-            <li>Our Work</li>
-            <li>Testimonials</li>
-            <li>Contact</li>
-          </ul>
+    <footer class="footer">
+      <div class="footer-border"></div>
+      <div class="container pt-5">
+        <div class="row">
+          <div class="col-12">
+            <a href="/">
+              <svg id="koodi-logo-footer" data-name="koodi logo footer" xmlns="http://www.w3.org/2000/svg" viewBox="30 25 500.15 180">
+                <defs>
+                  <style>.cls-1{fill:#000000;}</style>
+                </defs>
+                <rect id="logo-k-line" class="cls-1" x="39.86" y="34.99" width="23.41" height="117.45"/>
+                <path id="logo-k-circle" class="cls-1" d="M51.56,193.71a17.85,17.85,0,1,1,18-17.84A17.93,17.93,0,0,1,51.56,193.71Zm0-25.62a7.78,7.78,0,1,0,7.85,7.78A7.82,7.82,0,0,0,51.56,168.09Z"/>
+                <path class="cls-1" d="M456,34.86v56.8A59.65,59.65,0,0,0,358.41,120a59.56,59.56,0,0,0-115,.58h0A59.31,59.31,0,0,0,185.79,76.2C153,76.2,126.4,102.53,126.4,135s26.59,58.82,59.39,58.82a59.32,59.32,0,0,0,57.59-44.37h0a59.55,59.55,0,0,0,115,.63l0-.06A59.64,59.64,0,0,0,456,178.39h0v15.19H479.2V34.86ZM185.49,170.12a35.18,35.18,0,1,1,35.43-35.18A35.31,35.31,0,0,1,185.49,170.12Zm114.74,0a35.18,35.18,0,1,1,35.44-35.18A35.31,35.31,0,0,1,300.23,170.12Zm114.88,0h-.18A35.18,35.18,0,1,1,436.2,106.8a35,35,0,0,1-21.09,63.32Z"/>
+                <polygon id="logo-k-angle" class="cls-1" points="117.58 193.59 63.53 134.74 63.56 134.74 116.65 76.98 148.66 76.98 95.4 134.74 95.37 134.74 149.62 193.59 117.58 193.59"/>
+                <path id="logo-i-circle" class="cls-1" d="M501.58,35a17.85,17.85,0,1,0,18,17.84A17.93,17.93,0,0,0,501.58,35Zm0,25.62a7.78,7.78,0,1,1,7.86-7.78A7.82,7.82,0,0,1,501.58,60.61Z"/>
+                <rect id="logo-i-line" class="cls-1" x="489.88" y="76.27" width="23.41" height="117.45"/>
+              </svg>
+            </a>
+          </div>
+          <div class="col-12">
+            <ul class="footer-nav-links">
+              <li><a href="#our-work">Our Work</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <ul class="footer-contact-links">
+              <li><a href="#"><img src="/img/instagram-logo.png" alt="instagram logo"></a></li>
+              <li><a href="#"><img src="/img/facebook-logo.png" alt="facebook logo"></a></li>
+              <li><a href="#"><img src="/img/linkedin-logo.png" alt="linkedin logo"></a></li>
+            </ul>
+          </div>
         </div>
       </div>
-
     </footer>
 
 

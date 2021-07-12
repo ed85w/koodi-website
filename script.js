@@ -98,10 +98,41 @@ function random(min, max) {
 // SCROLLTRIGGER ANIMATIONS 
 gsap.registerPlugin(ScrollTrigger);
 
+// bounce in (our work section)
+const bounceInCircles = gsap.utils.toArray('.bounce-in');
+bounceInCircles.forEach((bounceInCircles) => {
+  let randDur = gsap.utils.random(2, 5);
+  gsap.from(bounceInCircles, { 
+    opacity: 0,
+    scale: 0,
+    duration: randDur,
+    ease: "elastic.out(1, 0.3)",
+    scrollTrigger: {
+      trigger: bounceInCircles,
+      start: "top 80%", //when top of element crosses 80% from of page
+      end: "bottom center",   //when bottom of element crosses center of page
+      toggleActions: "play none none none",
+    }
+  });
+})
+
+// our work section 
+const spinCircles = gsap.utils.toArray('.spinning');
+spinCircles.forEach((spinCircles) => {
+  gsap.to(spinCircles, {
+    rotationY: 580,
+    scrollTrigger: {
+      trigger: spinCircles,
+      scrub: 1.5
+    }
+  })
+})
+
+
+// testimonial section circle animation (mob )
 ScrollTrigger.matchMedia({
   // mobile only - each animated individually
   "(max-width: 991px)": function() {
-    // testimonial circle animation (mob )
     let testimonialTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonial-logo-container",

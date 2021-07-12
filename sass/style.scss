@@ -55,6 +55,7 @@ h5 {
   padding: 5px 16px;
 
   &.btn-primary {
+    min-width: 122px;
     background: $primary-purple;
     border: 5px solid $primary-purple;
   }
@@ -298,8 +299,7 @@ section.included {
 // our work 
 section.our-work {
   position: relative;
-  overflow: hidden
-  ;
+  overflow: hidden;
 
   // cicles 
   .circle {
@@ -318,7 +318,7 @@ section.our-work {
       box-shadow: 0px 96px 96px rgba(7, 48, 163, 0.16);
     }
     &.cyan-circle {
-      right: 90px;
+      right: 53px;
       top: 116px;
       width: calc(18px + 11vw);
       height: calc(18px + 11vw);
@@ -491,6 +491,7 @@ section.testimonials {
       width: 69%;
       height: auto;
       object-fit: cover;
+      fill: #6734FE
     }
   }
 
@@ -758,6 +759,48 @@ footer.footer {
     }
   }
 
+  // our work 
+  section.our-work {
+    overflow: visible;
+  }
+
+  section.about-us {
+    overflow: visible;
+
+    .circle.yellow-circle {
+      height: 200px;
+      width: 200px;
+      top: auto;
+      right: auto;
+      bottom: 30px;
+      left: -12%;
+    }
+
+    .circle.pink-circle {
+      height: 230px;
+      width: 230px;
+      top: 30px;
+      right: auto;
+      bottom: auto;
+      left: -1%;
+    }
+
+    .circle.blue-circle {
+      display: block;
+      width: 123px;
+      height: 123px;
+      top: 60%;
+      left: 15%;
+    }
+
+    .circle.cyan-circle {
+      width: 110px;
+      height: 110px;
+      top: 35%;
+      left: -1%;
+    }
+  }
+
 
 
 }
@@ -996,6 +1039,12 @@ footer.footer {
         transform: translateX(-50%) translateY(-50%) rotate(90deg);
         width: auto;
         height: 34%;
+        fill: white;
+
+        .cls-2 {
+          fill: white;
+        }
+
       }
     }
 
@@ -1012,10 +1061,34 @@ footer.footer {
 
   // about us
   section.about-us {
-    overflow: visible;
 
     .circle.yellow-circle {
+      height: 277px;
+      width: 277px;
+      // top: auto;
+      // right: auto;
+      // bottom: 30px;
+      // left: -12%;
+    }
 
+    .circle.pink-circle {
+      // height: 230px;
+      // width: 230px;
+      // top: 30px;
+      // right: auto;
+      // bottom: auto;
+      left: -10%;
+    }
+
+    .circle.blue-circle {
+      left: 17%;
+    }
+
+    .circle.cyan-circle {
+      width: 159px;
+      height: 159px;
+      top: 30%;
+      left: 20%;
     }
   }
 

@@ -103,7 +103,6 @@ const bounceInCircles = gsap.utils.toArray('.bounce-in');
 bounceInCircles.forEach((bounceInCircles) => {
   let randDur = gsap.utils.random(2, 5);
   gsap.from(bounceInCircles, { 
-    opacity: 0,
     scale: 0,
     duration: randDur,
     ease: "elastic.out(1, 0.3)",
@@ -129,10 +128,11 @@ spinCircles.forEach((spinCircles) => {
 })
 
 
+
 // testimonial section circle animation (mob )
 ScrollTrigger.matchMedia({
   // mobile only - each animated individually
-  "(max-width: 991px)": function() {
+  "(max-width: 990px)": function() {
     let testimonialTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonial-logo-container",
@@ -149,6 +149,17 @@ ScrollTrigger.matchMedia({
       duration: 1,
       ease: "back.out(1.7)"
     },0)
+  },
+  "(min-width: 991px)": function() {
+    let logoTl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".testimonials",
+      }
+    })
+    logoTl2.from("#testimonial-logo-k-line", {duration:1, height: 0, ease: Power3.easeOut }, 0.7)
+    logoTl2.from("#testimonial-logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7)
+    logoTl2.from("#testimonial-logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2)
+    logoTl2.from("#testimonial-logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5)
   }
 })
 

@@ -5,12 +5,12 @@ function burgerMenu() {
   console.log('click');
   if (navMenu.classList.contains("expanded")){
     navMenu.classList.remove("expanded");
-    burgerBtn.setAttribute("aria-expanded", false)
+    burgerBtn.setAttribute("aria-expanded", false);
 
   } else {
     navMenu.classList.add("expanded");
     animateListItems();
-    burgerBtn.setAttribute("aria-expanded", true)
+    burgerBtn.setAttribute("aria-expanded", true);
   }
 }
 
@@ -32,11 +32,11 @@ function animateListItems() {
 }
 
 // gsap timeline to animate logo 
-var logoTl = gsap.timeline({})
-logoTl.from("#logo-k-line", {duration:1, height: 0, ease: Power3.easeOut }, 0.7)
-logoTl.from("#logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7)
-logoTl.from("#logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2)
-logoTl.from("#logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5)
+var logoTl = gsap.timeline({});
+logoTl.from("#logo-k-line", {duration:1, height: 0, ease: Power3.easeOut }, 0.7);
+logoTl.from("#logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7);
+logoTl.from("#logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2);
+logoTl.from("#logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5);
 
 
 // // "floating circles"
@@ -57,17 +57,6 @@ circles.forEach(circle => {
   moveX(circle, 1);
   moveY(circle, -1);
 });
-
-function rotate(target, direction) {
-  
-  gsap.to(target, randomTime2(), {
-    rotation: randomAngle(direction),
-    delay: randomDelay(),
-    ease: Sine.easeInOut,
-    onComplete: rotate,
-    onCompleteParams: [target, direction * -1]
-  });
-}
 
 function moveX(target, direction) {
   
@@ -109,7 +98,7 @@ ScrollTrigger.matchMedia({
       opacity:0,
       x: -20,
       ease: "ease-in" ,
-      stagger: 0.1
+      stagger: 0.2
     });
   },
   // mobile - each animated individually

@@ -91,10 +91,66 @@ h5 {
 
 // cicles 
 .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   position: absolute;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+  .circle-inner {
+    border-radius: 50%;
+    height: 68%;
+    width: 68%;
+  }
 }
+
+.yellow-circle {
+  background: #FFDE33;
+  background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FFEB97 25%, #FFEB97 48%, #FFDE33 48%, #FFDE33 100% );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .circle-inner {
+    background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #FFEB97 33%, #FFEB97 100%);
+    box-shadow: 0px 37px 50px #F1B720;
+  }
+}
+
+.cyan-circle {
+  background: #1CF5C7;
+  background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #CCEEEE 25%, #CCEEEE 48%, #1CF5C7 48%, #1CF5C7 100% );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+  .circle-inner {
+    background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #CCEEEE 33%, #CCEEEE 100%);
+    box-shadow: 0px 13px 50px rgba(7, 169, 134, 0.8);
+  }
+}
+
+.blue-circle {
+  background: #8359FE;
+  background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #C1ACFF 25%, #C1ACFF 48%, #8359FE 48%, #8359FE 100% );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+  .circle-inner {
+    background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #C1ACFF 33%, #C1ACFF 100%);
+    box-shadow: 0px 37px 50px #4E31A2;
+  }
+}
+
+.pink-circle {
+  background: #F943E7;
+  background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FBD0FF 25%, #FBD0FF 48%, #F943E7 48%, #F943E7 100% );
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .circle-inner {
+    background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #FBD0FF 33%, #FBD0FF 100%);
+    box-shadow: 0px 37px 50px #A7319B;
+  }
+}
+
+
+
 
 // navbar 
 section.navigation {
@@ -259,10 +315,8 @@ section.landing {
       height: calc(120px + 11vw);
       max-width: 277px;
       max-height: 280px;
-      background: #FFDE33;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FFEB97 25%, #FFEB97 48%, #FFDE33 48%, #FFDE33 100% );
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+
     .cyan-circle {
       right: -69px;
       top: 0px;
@@ -270,15 +324,9 @@ section.landing {
       height: calc(80px + 9vw);
       max-width: 162px;
       max-height: 162px;
-      background: #1CF5C7;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #CCEEEE 25%, #CCEEEE 48%, #1CF5C7 48%, #1CF5C7 100% );
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .blue-circle {
       display: none;
-      background: #8359FE;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #C1ACFF 25%, #C1ACFF 48%, #8359FE 48%, #8359FE 100% );
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     .pink-circle {
       left: 0px;
@@ -287,14 +335,8 @@ section.landing {
       height: calc(133px + 11vw);
       max-width: 320px;
       max-height: 320px;
-      background: #F943E7;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FBD0FF 25%, #FBD0FF 48%, #F943E7 48%, #F943E7 100% );
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
   }
-  
-
-
 }
 
 // koodi overview 
@@ -345,24 +387,18 @@ section.our-work {
       height: calc(60px + 11vw);
       max-width: 280px;
       max-height: 280px;
-      background: #FFDE33;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FFEB97 25%, #FFEB97 48%, #FFDE33 48%, #FFDE33 100% );
     }
     &.cyan-circle {
       right: 53px;
       top: 116px;
       width: calc(18px + 11vw);
       height: calc(18px + 11vw);
-      background: #1CF5C7;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #CCEEEE 25%, #CCEEEE 48%, #1CF5C7 48%, #1CF5C7 100% );
     }
     &.blue-circle {
       right: -10px;
       top: 173px;
       width: calc(16px + 11vw);
       height: calc(16px + 11vw);
-      background: #8359FE;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #C1ACFF 25%, #C1ACFF 48%, #8359FE 48%, #8359FE 100% );
     }
 
   }
@@ -380,125 +416,7 @@ section.our-work {
       height: 5px;
     }
   }
-
-//   .angry-grid {
-//     display: grid; 
-//     gap: 5px;
-//     height: 100%;
-//     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-//     grid-template-columns: 1fr 1fr;
-
-//     .grid-outer {
-//       position: relative;
-//       padding-bottom: 48%;
-
-//       .grid-inner {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-
-//         .grid-image {
-//           width: 100%;
-//           height: 100%;
-//           object-fit: cover;
-//         }
-
-//         .grid-video {
-//           width: 100%;
-//           max-height: 100%;
-//           object-fit: cover;
-//         }
-
-//         .overlay {
-//           position: absolute;
-//           top: 0;
-//           left: 0;
-//           height: 100%;
-//           width: 100%;
-//           background: #6734fe80;
-//           opacity: 0;
-          
-//           a {
-//             width: 100%;
-//             height: 100%;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-//           }
-//         }
-//       }
-
-//       &:hover {
-//         .overlay {
-//           opacity: 1;
-//         }
-//       }
-//     }
- 
-//     #item-0 {
-    
-//        background-color: #555969; 
-//        grid-row-start: 1;
-//        grid-column-start: 1;
-    
-//        grid-row-end: 3;
-//        grid-column-end: 3;
-    
-//     }
-//     #item-1 {
-    
-//        background-color: #BBE59E; 
-//        grid-row-start: 3;
-//        grid-column-start: 1;
-    
-//        grid-row-end: 4;
-//        grid-column-end: 2;
-    
-//     }
-//     #item-2 {
-    
-//        background-color: #979DD6; 
-//        grid-row-start: 4;
-//        grid-column-start: 1;
-    
-//        grid-row-end: 6;
-//        grid-column-end: 3;
-    
-//     }
-//     #item-3 {
-    
-//        background-color: #599CD9; 
-//        grid-row-start: 3;
-//        grid-column-start: 2;
-    
-//        grid-row-end: 4;
-//        grid-column-end: 3;
-    
-//     }
-//     #item-4 {
-    
-//        background-color: #98FDAA; 
-//        grid-row-start: 6;
-//        grid-column-start: 1;
-    
-//        grid-row-end: 7;
-//        grid-column-end: 3;
-    
-//     }
-//     #item-5 {
-    
-//        background-color: #EAEBD8; 
-//        grid-row-start: 7;
-//        grid-column-start: 1;
-    
-//        grid-row-end: 9;
-//        grid-column-end: 3;
-    
-//     }
-//  }
-   
+  
 }
 
 // portfolio 
@@ -557,19 +475,20 @@ section.portfolio {
       grid-column-start: 1;
       grid-row-end: 4;
       grid-column-end: 2;
-
+      
       .overlay {
-        background: #F943E7;
+        background: #f943e7e7;
       }
     }
+    
     #item-2 {
-      grid-row-start: 4;
+      grid-row-start: 8;
       grid-column-start: 1;
-      grid-row-end: 6;
+      grid-row-end: 10;
       grid-column-end: 3;
-
+      
       .overlay {
-        background: #1CF5C7;
+        background: #1cf5c6e7;
       }
     }
     #item-3 {
@@ -577,9 +496,9 @@ section.portfolio {
       grid-column-start: 2;
       grid-row-end: 4;
       grid-column-end: 3;
-
+      
       .overlay {
-        background: #FFDE33;
+        background: #FFDE33e7;
         .overlay-content {
           color: black;
         }
@@ -592,13 +511,13 @@ section.portfolio {
       grid-column-end: 3;
     }
     #item-5 {
-      grid-row-start: 8;
+      grid-row-start: 4;
       grid-column-start: 1;
-      grid-row-end: 10;
+      grid-row-end: 6;
       grid-column-end: 3;
 
       .overlay {
-        background: #F943E7;
+        background: #F943E7e7;
       }
     }
 
@@ -623,7 +542,7 @@ section.portfolio {
           display: flex;
           justify-content: center;
           align-items: center;
-          background: $primary-purple;
+          background: #6734fee7;
           opacity: 0;
 
           .overlay-content {
@@ -656,11 +575,9 @@ section.testimonials {
   .testimonial-logo-container {
     position: relative;
     width: 100%;
-    // height: 100%;
     top: 0;
     left: 0;
     background: white;
-    // overflow: hidden;
 
     #koodi-logo-testimonial {
       position: relative;
@@ -680,9 +597,6 @@ section.testimonials {
       top: 0px;
       width: 56vw;
       height: 56vw;
-      background: #F943E7;
-      background: radial-gradient(circle, #Fafafa 0%, #Fafafa 25%, #FBD0FF 25%, #FBD0FF 48%, #F943E7 48%, #F943E7 100% );
-      box-shadow: 0px 96px 96px rgba(7, 48, 163, 0.16);
     }
   
     h1{
@@ -694,7 +608,6 @@ section.testimonials {
         position: relative;
         background: #8359FE;
         top: 5px;
-        // width: 100%;
         height: 5px;
       }
     }
@@ -782,7 +695,6 @@ section.contact-us {
       position: relative;
       background: #1CF5C7;
       top: 5px;
-      // width: 100%;
       height: 5px;
     }
   }
@@ -983,7 +895,7 @@ footer.footer {
     }
 
     .circle.blue-circle {
-      display: block;
+      display: flex;
       width: 123px;
       height: 123px;
       top: 60%;
@@ -1111,7 +1023,7 @@ footer.footer {
       }
 
       .blue-circle {
-        display: block;
+        display: flex;
         bottom: 0;
         left: -150px;
         height: 270px;
@@ -1144,91 +1056,7 @@ footer.footer {
         width: 100px;
         height: 100px;
       }
-    }
-
-
-
-    // .angry-grid {
-    //   display: grid; 
-    //   gap: 10px;
-    //   height: 100%;   
-    //   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    //   grid-template-columns: 1fr 1fr 1fr;
-
-    //   .grid-outer {
-    //     position: relative;
-    //     padding-bottom: 49%;
-
-    //     .grid-inner {
-    //       position: absolute;
-    //       top: 0;
-    //       left: 0;
-    //       width: 100%;
-    //       height: 100%;
-    //     }
-    //   }
-   
-    //   #item-0 {
-    //      background-color: #555969; 
-    //      grid-row-start: 1;
-    //      grid-column-start: 1;
-      
-    //      grid-row-end: 3;
-    //      grid-column-end: 3;
-    //   }
-    //   #item-1 {
-      
-    //      background-color: #7B7BBE; 
-    //      grid-row-start: 1;
-    //      grid-column-start: 3;
-      
-    //      grid-row-end: 2;
-    //      grid-column-end: 4;
-      
-    //   }
-    //   #item-2 {
-      
-    //      background-color: #DE79DD; 
-    //      grid-row-start: 2;
-    //      grid-column-start: 3;
-      
-    //      grid-row-end: 4;
-    //      grid-column-end: 4;
-      
-    //   }
-    //   #item-3 {
-      
-    //      background-color: #F6C57D; 
-    //      grid-row-start: 3;
-    //      grid-column-start: 1;
-      
-    //      grid-row-end: 4;
-    //      grid-column-end: 3;
-      
-    //   }
-    //   #item-4 {
-      
-    //      background-color: #AD66D7; 
-    //      grid-row-start: 4;
-    //      grid-column-start: 2;
-      
-    //      grid-row-end: 6;
-    //      grid-column-end: 4;
-      
-    //   }
-    //   #item-5 {
-      
-    //      background-color: #7BF78C; 
-    //      grid-row-start: 4;
-    //      grid-column-start: 1;
-      
-    //      grid-row-end: 6;
-    //      grid-column-end: 2;
-      
-    //   }
-    // }
-     
-
+    }    
   }
 
   // portfolio 
@@ -1312,7 +1140,6 @@ footer.footer {
       width: 20%;
       top: 0;
       left: 0;
-      // overflow: hidden;
       background: none;
 
       #koodi-logo-testimonial {

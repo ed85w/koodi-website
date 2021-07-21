@@ -47,7 +47,7 @@ const randomTime = random(3, 5);
 const randomTime2 = random(5, 10);
 const randomAngle = random(-10, 10);
 
-const circles = gsap.utils.toArray('div.circle.floating');
+const circles = gsap.utils.toArray('.floating');
 circles.forEach(circle => {
   gsap.set(circle, {
     x: randomX(-1),
@@ -97,6 +97,40 @@ function random(min, max) {
 
 // SCROLLTRIGGER ANIMATIONS 
 gsap.registerPlugin(ScrollTrigger);
+
+// fade in (included section)
+ScrollTrigger.matchMedia({
+	
+  // desktop - stagger all 
+  "(min-width: 991px)": function() {
+    gsap.from(".included-container", {
+      scrollTrigger: ".included-container", 
+      duration: 1,
+      opacity:0,
+      x: -20,
+      ease: "ease-in" ,
+      stagger: 0.1
+    });
+  },
+  // mobile - each animated individually
+  "(max-width: 990px)": function() {
+    var fadeIn = gsap.utils.toArray('.included-container');
+    fadeIn.forEach((fadeIn) => {
+      gsap.from(fadeIn, { 
+        duration: 1,
+        opacity:0,
+        x: -20,
+        ease: "ease-in" ,
+        scrollTrigger: {
+          trigger: fadeIn,
+          start: "top 70%", //when top of element crosses 80% from of page
+          end: "bottom center",   //when bottom of element crosses center of page
+          toggleActions: "play none none none",
+        }
+      });
+    })
+  },
+});
 
 // bounce in (our work section)
 const bounceInCircles = gsap.utils.toArray('.bounce-in');

@@ -3,7 +3,8 @@
 }
 
 // variables
-$primary-purple: rgb(103, 52, 254);
+$primary-purple: #6734fe;
+$grey: #545059;
 
 html,
 body {
@@ -15,6 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  color: $grey;
 }
 
 p {
@@ -235,7 +237,7 @@ section.navigation {
 
         
         a {
-          color: black;
+          color: $grey;
 
           &::after {
             content: '';
@@ -355,6 +357,10 @@ section.included {
   background: #4E31A1;
   color: white;
 
+  h4, h3, p {
+    color: white;
+  }
+
   .included-container {
 
     .included-img-container {
@@ -364,6 +370,7 @@ section.included {
 
       img {
         max-width: 100%;
+        height: auto;
       }
     }
 
@@ -450,6 +457,9 @@ section.portfolio {
     
     &.moonrise {
       background-image: url(/img/moonrise-logo-bg.png);
+      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/img/moonrise-logo-bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     &.mastrelli-maths {
@@ -489,6 +499,20 @@ section.portfolio {
       
       .overlay {
         background: #1cf5c6e7;
+
+        h2, p {
+          color: black;
+        }
+
+        .btn-third {
+          color: black;
+          border-color: black;
+          
+          &:hover {
+            color: white;
+            border-color: white; 
+          }
+        }
       }
     }
     #item-3 {
@@ -501,6 +525,10 @@ section.portfolio {
         background: #FFDE33e7;
         .overlay-content {
           color: black;
+
+          h2, p {
+            color: black;
+          }
         }
       }
     }
@@ -547,6 +575,10 @@ section.portfolio {
 
           .overlay-content {
             color: white;
+
+            h2, p {
+              color: white;
+            }
           }
         }
       }
@@ -601,6 +633,7 @@ section.testimonials {
   
     h1{
       display: inline-block;
+      // color: white;
   
       &::after {
         content: '';
@@ -612,8 +645,15 @@ section.testimonials {
       }
     }
 
+    h5 {
+      // color: white;
+      font-weight: bold;
+      font-style: italic;
+    }
+
     h5.person-name {
       color: $primary-purple;
+      font-weight: bold;
     }
   }
 
@@ -924,6 +964,10 @@ footer.footer {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {
+          height: 60px;
+        }
       }
 
     }
@@ -992,8 +1036,8 @@ footer.footer {
 
         li {
           img {
-            width: 30px;
-            height: 30px;
+            width: 100%;
+            height: 100%;
           }
         }
       }
@@ -1012,7 +1056,7 @@ footer.footer {
       }
 
       .yellow-circle {
-        left: -120px;
+        left: -190px;
         top: -215px;
       }
   
@@ -1028,6 +1072,10 @@ footer.footer {
         left: -150px;
         height: 270px;
         width: 270px;
+      }
+
+      .cyan-circle {
+        right: -158px;
       }
     }
 

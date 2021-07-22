@@ -121,7 +121,7 @@ ScrollTrigger.matchMedia({
   },
 });
 
-// bounce in (our work section)
+// bounce in (circles, our work section)
 const bounceInCircles = gsap.utils.toArray('.bounce-in');
 bounceInCircles.forEach((bounceInCircles) => {
   let randDur = gsap.utils.random(2, 5);
@@ -138,7 +138,28 @@ bounceInCircles.forEach((bounceInCircles) => {
   });
 })
 
-// our work section 
+
+// const stretchIn = gsap.utils.toArray('.grid-outer');
+// stretchIn.forEach((stretchIn) => {
+//   gsap.from(stretchIn, { 
+//     scaleY: 1.5,
+//     scaleX: 1,
+//     y: 300,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "ease-in",
+//     scrollTrigger: {
+//       trigger: stretchIn,
+//       start: "top 80%", //when top of element crosses 80% from of page
+//       end: "bottom center",   //when bottom of element crosses center of page
+//       toggleActions: "play none none none",
+//     }
+//   });
+// })
+
+
+
+// spin (cicles, about section) 
 const spinCircles = gsap.utils.toArray('.spinning');
 spinCircles.forEach((spinCircles) => {
   gsap.to(spinCircles, {
@@ -174,6 +195,7 @@ ScrollTrigger.matchMedia({
     },0)
   },
   "(min-width: 991px)": function() {
+    // logo animation 
     let logoTl2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonials",
@@ -183,6 +205,12 @@ ScrollTrigger.matchMedia({
     logoTl2.from("#testimonial-logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7)
     logoTl2.from("#testimonial-logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2)
     logoTl2.from("#testimonial-logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5)
+    // circle animation
+    logoTl2.from(".testimonials .container .pink-circle", {
+      x: 300,
+      duration: 1,
+      ease: "ease-in"
+    },0)
   }
 })
 

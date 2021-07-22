@@ -3,7 +3,7 @@
 }
 
 // variables
-$primary-purple: #6734fe;
+$primary-purple: #4e31a1;
 $grey: #545059;
 
 html,
@@ -114,7 +114,7 @@ h5 {
 
   .circle-inner {
     background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #FFEB97 33%, #FFEB97 100%);
-    box-shadow: 0px 37px 50px #F1B720;
+    box-shadow: 0px 7px 14px #F1B720;
   }
 }
 
@@ -125,7 +125,7 @@ h5 {
   
   .circle-inner {
     background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #CCEEEE 33%, #CCEEEE 100%);
-    box-shadow: 0px 13px 50px rgba(7, 169, 134, 0.8);
+    box-shadow: 0px 13px 19px rgba(7, 169, 134, 0.8);
   }
 }
 
@@ -136,7 +136,7 @@ h5 {
   
   .circle-inner {
     background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #C1ACFF 33%, #C1ACFF 100%);
-    box-shadow: 0px 37px 50px #4E31A2;
+    box-shadow: 0px 10px 20px #4E31A2;
   }
 }
 
@@ -147,7 +147,7 @@ h5 {
 
   .circle-inner {
     background: radial-gradient(circle, #Fafafa 0%, #Fafafa 33%, #FBD0FF 33%, #FBD0FF 100%);
-    box-shadow: 0px 37px 50px #A7319B;
+    box-shadow: 0px 13px 20px #A7319B;
   }
 }
 
@@ -503,11 +503,10 @@ section.portfolio {
         h2, p {
           color: black;
         }
-
         .btn-third {
           color: black;
           border-color: black;
-          
+
           &:hover {
             color: white;
             border-color: white; 
@@ -602,7 +601,8 @@ section.portfolio {
 section.testimonials {
   position: relative;
   // overflow: hidden;
-  background: #C1ACFF;
+  background: #4e31a1;
+  color: white;
 
   .testimonial-logo-container {
     position: relative;
@@ -616,7 +616,7 @@ section.testimonials {
       width: 69%;
       height: auto;
       object-fit: cover;
-      fill: #6734FE
+      fill: $primary-purple;
     }
   }
 
@@ -633,27 +633,31 @@ section.testimonials {
   
     h1{
       display: inline-block;
-      // color: white;
+      color: white;
   
       &::after {
         content: '';
         display: block;
         position: relative;
-        background: #8359FE;
+        background: #1cf5c6e7;
         top: 5px;
         height: 5px;
       }
     }
 
     h5 {
-      // color: white;
+      color: white;
       font-weight: bold;
       font-style: italic;
     }
 
     h5.person-name {
-      color: $primary-purple;
+      color: #1cf5c6;
       font-weight: bold;
+    }
+
+    .swiper-pagination-bullet {
+      background: #1cf5c6;
     }
   }
 
@@ -746,7 +750,7 @@ section.contact-us {
       font-weight: bold;
       margin-bottom: 4px;
       padding-left: 15px;
-      color: #6734fe;
+      // color: $primary-purple;
     }
 
     .form-control {
@@ -779,6 +783,7 @@ section.contact-us {
 
         img {
           margin-right: 30px;
+          filter: brightness(0) saturate(100%) invert(16%) sepia(84%) saturate(3722%) hue-rotate(254deg) brightness(74%) contrast(83%);
         }
       }
     }
@@ -895,6 +900,30 @@ footer.footer {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+
+  // circles
+  .circle.yellow-circle {
+    .circle-inner {
+      box-shadow: 0px 37px 50px #F1B720;
+    }
+  }
+
+  .circle.cyan-circle {
+    .circle-inner {
+      box-shadow: 0px 13px 50px rgba(7, 169, 134, 0.8);
+    }
+  }
+
+  .circle.pink-circle {
+    .circle-inner {
+      box-shadow: 0px 37px 50px #A7319B;
+    }
+  }
+  .circle.blue-circle {
+    .circle-inner {
+      box-shadow: 0px 37px 50px #4E31A2;
+    }
+  }
 
   // landing section 
   section.landing {
@@ -1118,7 +1147,7 @@ footer.footer {
 
     .angry-grid {
       display: grid; 
-      gap: 10px;
+      gap: 25px;
       height: 100%;   
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
@@ -1180,7 +1209,6 @@ footer.footer {
   section.testimonials {
     overflow: visible;
     position: relative;
-    background: #C1ACFF;
 
     .testimonial-logo-container {
       position: absolute;

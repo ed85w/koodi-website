@@ -101,9 +101,19 @@ h5 {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
   .circle-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
     height: 68%;
     width: 68%;
+
+    .circle-center {
+      border-radius: 50%;
+      height: 47%;
+      width: 47%;
+      background: white;
+    }
   }
 }
 
@@ -361,6 +371,10 @@ section.included {
     color: white;
   }
 
+  h4.h5 {
+    font-weight: bold;
+  }
+
   .included-container {
 
     .included-img-container {
@@ -456,8 +470,8 @@ section.portfolio {
     background-repeat: no-repeat;
     
     &.moonrise {
-      background-image: url(/img/moonrise-logo-bg.png);
-      background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(/img/moonrise-logo-bg.png);
+      background-image: url(/img/moonrise-bg.jpg);
+      // background: linear-gradient(rgba(0, 0, 0, 0.164), rgba(0, 0, 0, 0.158)), url(/img/moonrise-logo-bg.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -647,13 +661,14 @@ section.testimonials {
 
     h5 {
       color: white;
-      font-weight: bold;
+      font-weight: normal;
       font-style: italic;
     }
 
     h5.person-name {
       color: #1cf5c6;
       font-weight: bold;
+      font-style: normal;
     }
 
     .swiper-pagination-bullet {
@@ -746,7 +761,7 @@ section.contact-us {
   .form-row {
 
     label {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
       margin-bottom: 4px;
       padding-left: 15px;
@@ -773,7 +788,7 @@ section.contact-us {
 
       a {
 
-        color: black;
+        color: $grey;
         font-weight: bold;
 
         &:hover {
@@ -817,7 +832,7 @@ footer.footer {
 
       a {
         display: inline-block;
-        color: black;
+        color: $grey;
   
         &::after {
         content: '';
@@ -1236,11 +1251,11 @@ footer.footer {
 
     .testimonial-container {
       .pink-circle {
-        right: -94px;
+        right: -164px;
         top: -231px;
         z-index: 2;
-        width: 416px;
-        height: 416px;
+        width: 380px;
+        height: 380px;
       }
     }
   }

@@ -244,7 +244,6 @@ section.navigation {
         font-size: 20px;
         font-weight: bold;
         z-index: 1;
-
         
         a {
           color: $grey;
@@ -262,20 +261,24 @@ section.navigation {
             text-decoration: none;
 
             &::after {
-              top: -18px;
+              top: -17px;
               transform: scaleX(1.2) scaleY(9);
               transition: 0.2s ease;
               z-index: -1;
             }
           }
-
         }
         &:nth-of-type(1) a::after {
           background: #F943E7;
         }
-        &:nth-of-type(2) a::after {
-          background: $primary-purple;
-        }
+        &:nth-of-type(2) a {
+            &:hover {
+              color: white;
+            }
+            &::after {
+            background: $primary-purple;
+          }
+      }
         &:nth-of-type(3) a::after {
           background: #FFDE33;
         }

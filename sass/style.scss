@@ -401,7 +401,7 @@ section.our-work {
     border-radius: 50%;
     position: absolute;
 
-    &.yellow-circle {
+    &.pink-circle {
       right: 13px;
       top: 0px;
       width: calc(60px + 11vw);
@@ -479,13 +479,17 @@ section.portfolio {
     &.mastrelli-maths {
       background-image: url(/img/mastrelli-logo-bg.png);
     }
+
+    &.heritage-gardens {
+      background-image: url(/img/heritage-bg.png);
+    }
   }
 
   .angry-grid {
     display: grid; 
     gap: 10px;
     height: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 
     #item-0 {
@@ -505,17 +509,19 @@ section.portfolio {
       }
     }
     
+    // C AND J MOTORHOMES 
     #item-2 {
-      grid-row-start: 8;
+      grid-row-start: 6;
       grid-column-start: 1;
-      grid-row-end: 10;
-      grid-column-end: 3;
+      grid-row-end: 7;
+      grid-column-end: 2;
       
       .overlay {
         background: #1cf5c6e7;
 
         h2, p {
           color: black;
+          font-size: 1rem;
         }
         .btn-third {
           color: black;
@@ -529,16 +535,16 @@ section.portfolio {
       }
     }
     #item-3 {
-      grid-row-start: 3;
-      grid-column-start: 2;
-      grid-row-end: 4;
-      grid-column-end: 3;
+      grid-row-start: 6;
+      grid-column-start: 2;  
+      grid-row-end: 7;
+      grid-column-end: 3;     
       
       .overlay {
         background: #FFDE33e7;
         .overlay-content {
           color: black;
-
+          
           h2, p {
             color: black;
           }
@@ -546,15 +552,26 @@ section.portfolio {
       }
     }
     #item-4 {
-      grid-row-start: 6;
+      grid-row-start: 7;
       grid-column-start: 1;
-      grid-row-end: 8;
+      grid-row-end: 9;
       grid-column-end: 3;
     }
+
     #item-5 {
       grid-row-start: 4;
       grid-column-start: 1;
       grid-row-end: 6;
+      grid-column-end: 3;
+      
+      .overlay {
+        background: #F943E7e7;
+      }
+    }
+    #item-6 {
+      grid-row-start: 3;
+      grid-column-start: 2;
+      grid-row-end: 4;
       grid-column-end: 3;
 
       .overlay {
@@ -997,6 +1014,10 @@ footer.footer {
   // our work 
   section.our-work {
     overflow: visible;
+
+    .circle.cyan-circle {
+      right: 154px;
+    }
   }
 
   // included in websites 
@@ -1131,10 +1152,10 @@ footer.footer {
 
     .circle {
 
-      &.yellow-circle {
+      &.pink-circle {
         top: -37px;
       }
-
+      
       &.cyan-circle {
         right: -90px;
         top: 171px;
@@ -1192,11 +1213,19 @@ footer.footer {
          grid-row-end: 2;
          grid-column-end: 4;
       }
+
+      // C AND J MOTORHOMES 
       #item-2 {
-         grid-row-start: 2;
-         grid-column-start: 3;
-         grid-row-end: 4;
-         grid-column-end: 4;
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-row-end: 5;
+        grid-column-end: 2;
+
+        .overlay {
+          h2.h4 {
+            font-size: 1.5rem;
+          }
+        }
       }
       #item-3 {
          grid-row-start: 3;
@@ -1212,10 +1241,16 @@ footer.footer {
          grid-column-end: 4;
       }
       #item-5 {
-         grid-row-start: 4;
-         grid-column-start: 1;
-         grid-row-end: 6;
-         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-column-start: 3;
+         grid-row-end: 4;
+         grid-column-end: 4;
+      }
+      #item-6 {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-row-end: 6;
+        grid-column-end: 2;
       }
     }
   }

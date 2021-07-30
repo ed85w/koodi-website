@@ -205,5 +205,7 @@ const swiper = new Swiper(".mySwiper", {
   keyboard: {
     enabled: true,
   },
-  autoplay: true
+  autoplay: {
+    delay: 10000,
+  }
 });

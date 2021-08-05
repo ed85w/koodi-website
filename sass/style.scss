@@ -1304,14 +1304,29 @@ footer.footer {
     .circle.yellow-circle {
       height: 277px;
       width: 277px;
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+      .circle-inner {
+        box-shadow: 0px 37px 50px #F1B720;
+      }
     }
 
     .circle.pink-circle {
       left: -10%;
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+      .circle-inner {
+        box-shadow: 0px 37px 50px #a7319b
+      }
     }
 
     .circle.blue-circle {
       left: 17%;
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+
+      .circle-inner {
+        box-shadow: 0px 20px 25px #4E31A2;
+      }
     }
 
     .circle.cyan-circle {
@@ -1319,6 +1334,7 @@ footer.footer {
       height: 159px;
       top: 30%;
       left: 20%;
+      box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     }
   }
 

@@ -634,7 +634,6 @@ section.portfolio {
 // testimonials 
 section.testimonials {
   position: relative;
-  // overflow: hidden;
   background: #4e31a1;
   color: white;
 
@@ -691,8 +690,12 @@ section.testimonials {
       font-style: normal;
     }
 
-    .swiper-pagination-bullet {
-      background: #1cf5c6;
+    .swiper-container {
+      overflow: hidden;
+
+      .swiper-pagination-bullet {
+        background: #1cf5c6;
+      }
     }
   }
 

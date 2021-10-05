@@ -6,6 +6,11 @@
 $primary-purple: #4e31a1;
 $grey: #545059;
 
+// set up gsap 
+#koodi-logo {
+  visibility: hidden;
+}
+
 html,
 body {
   overflow-x: hidden;

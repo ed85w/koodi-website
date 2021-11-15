@@ -22,26 +22,14 @@ function burgerMenu() {
 
 // wait until DOM is ready
 document.addEventListener("DOMContentLoaded", function(event) {
-  
-  // wait until window is loaded - all images, styles-sheets, fonts, links, and other media assets
-  // you could also use addEventListener() instead
-  // window.onload = function() {
     
-     // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
-    //  window.requestAnimationFrame(function() {
-    
-        // GSAP custom code goes here     
-        // gsap timeline to animate logo 
-        var logoTl = gsap.timeline({});
-        logoTl.from("#koodi-logo", {duration:0, autoAlpha:0});
-        logoTl.from("#logo-k-line", {duration:1, height: 0, ease: Power3.easeOut }, 0.7);
-        logoTl.from("#logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7);
-        logoTl.from("#logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2);
-        logoTl.from("#logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5);
-       
-    //  });
-    
-  // };
+  // gsap timeline to animate logo 
+  var logoTl = gsap.timeline({});
+  logoTl.from("#koodi-logo", {duration:0, autoAlpha:0});
+  logoTl.from("#logo-k-line", {duration:1, height: 0, ease: Power3.easeOut }, 0.7);
+  logoTl.from("#logo-i-line", {duration:1, scaleY:0, transformOrigin:"center bottom",ease: Power3.easeOut} , 0.7);
+  logoTl.from("#logo-k-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.2);
+  logoTl.from("#logo-i-circle", {duration: 1, scale: 0, transformOrigin: "center center", ease:Back.easeOut.config(1.7)}, 1.5);
 
 });
 
@@ -113,7 +101,12 @@ ScrollTrigger.matchMedia({
   // desktop - stagger all 
   "(min-width: 991px)": function() {
     gsap.from(".included-container", {
-      scrollTrigger: ".included-container", 
+      // scrollTrigger: ".included-container", 
+      scrollTrigger: {
+        trigger: ".included-container",
+        start: "top 80%", //when top of element crosses 80% from of page
+        toggleActions: "play none none none",
+      },
       duration: 1,
       opacity:0,
       x: -20,

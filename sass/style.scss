@@ -495,34 +495,33 @@ section.portfolio {
 
   .angry-grid {
     display: grid; 
-    gap: 10px;
+    gap: 30px;
     height: 100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
 
     #item-0 {
       grid-row-start: 1;
       grid-column-start: 1;
-      grid-row-end: 3;
+      grid-row-end: 2;
       grid-column-end: 3;
     }
     #item-1 {
       grid-row-start: 3;
       grid-column-start: 1;
-      grid-row-end: 4;
-      grid-column-end: 2;
+      grid-row-end: 3;
+      grid-column-end: 3;
       
       .overlay {
         background: #f943e7e7;
       }
     }
     
-    // C AND J MOTORHOMES 
     #item-2 {
-      grid-row-start: 6;
+      grid-row-start:6;
       grid-column-start: 1;
-      grid-row-end: 7;
-      grid-column-end: 2;
+      grid-row-end: 6;
+      grid-column-end: 3;
       
       .overlay {
         background: #1cf5c6e7;
@@ -543,43 +542,44 @@ section.portfolio {
       }
     }
     #item-3 {
-      grid-row-start: 6;
-      grid-column-start: 2;  
-      grid-row-end: 7;
-      grid-column-end: 3;     
+      display: none;
+      // grid-row-start: 7;
+      // grid-column-start: 1;  
+      // grid-row-end: 9;
+      // grid-column-end: 3;     
       
-      .overlay {
-        background: #FFDE33e7;
-        .overlay-content {
-          color: black;
+      // .overlay {
+      //   background: #FFDE33e7;
+      //   .overlay-content {
+      //     color: black;
           
-          h2, p {
-            color: black;
-          }
-        }
-      }
+      //     h2, p {
+      //       color: black;
+      //     }
+      //   }
+      // }
     }
     #item-4 {
-      grid-row-start: 7;
+      grid-row-start: 4;
       grid-column-start: 1;
-      grid-row-end: 9;
+      grid-row-end: 4;
       grid-column-end: 3;
     }
 
     #item-5 {
-      grid-row-start: 4;
+      grid-row-start: 2;
       grid-column-start: 1;
-      grid-row-end: 6;
+      grid-row-end: 2;
       grid-column-end: 3;
       
       .overlay {
-        background: #F943E7e7;
+        background: #1cf5c6e7;
       }
     }
     #item-6 {
-      grid-row-start: 3;
-      grid-column-start: 2;
-      grid-row-end: 4;
+      grid-row-start: 5;
+      grid-column-start: 1;
+      grid-row-end: 5;
       grid-column-end: 3;
 
       .overlay {
@@ -1225,7 +1225,6 @@ footer.footer {
          grid-column-end: 4;
       }
 
-      // C AND J MOTORHOMES 
       #item-2 {
         grid-row-start: 4;
         grid-column-start: 1;
@@ -1239,6 +1238,7 @@ footer.footer {
         }
       }
       #item-3 {
+        display: block;
          grid-row-start: 3;
          grid-column-start: 1;
          grid-row-end: 4;
